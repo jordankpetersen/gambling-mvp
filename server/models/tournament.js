@@ -14,6 +14,7 @@ const tournamentSchema = new Schema({
   players: [{type: Schema.Types.ObjectId, ref: "Player", required: true}],
   winnerTeam: {type: String},
   symbol: {type: String, required: true},
+  createdDate: Date.now(),
 }, { versionKey: false });
 
 const Tournament = model("Tournament", tournamentSchema);
